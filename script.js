@@ -1,5 +1,11 @@
 function minDate(dates) {
   //write you code here
+	let min_date = dates.reduce((acc, date) => {
+      if (Date.parse(date) > Date.parse(acc)) {
+         return acc;
+      }
+   });
+   return min_date;
 }
 
 // Do not change the code
